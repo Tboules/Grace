@@ -6,7 +6,7 @@
   "license": "0BSD",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop",
+    "develop": "env-cmd -f .env gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
@@ -14,11 +14,26 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
+    "@chakra-ui/core": "^0.8.0",
+    "@contentful/rich-text-react-renderer": "^14.1.1",
+    "@emotion/core": "^10.0.35",
+    "@emotion/styled": "^10.0.27",
+    "@popmotion/popcorn": "^0.4.4",
+    "emotion-theming": "^10.0.27",
+    "framer-motion": "^2.9.1",
     "gatsby": "^2.24.79",
+    "gatsby-plugin-anchor-links": "^1.1.1",
+    "gatsby-plugin-sass": "^2.3.17",
+    "gatsby-plugin-smoothscroll": "^1.2.0",
+    "gatsby-source-contentful": "^2.3.55",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-alice-carousel": "^2.0.1",
+    "react-dom": "^16.12.0",
+    "react-responsive": "^8.1.0"
   },
   "devDependencies": {
+    "env-cmd": "^10.1.0",
+    "node-sass": "^4.14.1",
     "prettier": "2.1.2"
   },
   "repository": {

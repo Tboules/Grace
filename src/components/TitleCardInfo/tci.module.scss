@@ -1,0 +1,38 @@
+.cont {
+  min-height: 80vh;
+  text-align: center;
+  padding-top: 150px;
+
+  h1 {
+    font-weight: 400;
+    font-size: 2.5rem;
+  }
+
+  p {
+    width: 60%;
+    margin: auto;
+    margin-top: 80px;
+    line-height: 23px;
+    letter-spacing: 1px;
+    padding-bottom: 40px;
+  }
+}
+
+.picCont {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: auto;
+  margin-top: 80px;
+
+  img {
+    height: 250px;
+    margin-bottom: 30px;
+
+    @media only screen and (max-width: 600px) {
+      width: 300px;
+      height: auto;
+    }
+  }
+}

@@ -1,0 +1,86 @@
+.cont {
+  width: 50%;
+  height: 450px;
+  display: flex;
+  background-color: rgba(245, 245, 245, 0.213);
+
+  @media only screen and (max-width: 900px) {
+    width: 100%;
+    flex-direction: column;
+    min-height: 700px;
+  }
+
+  img {
+    width: 50%;
+    object-fit: cover;
+    object-position: center;
+
+    @media only screen and (max-width: 900px) {
+      order: 0 !important;
+      height: 50%;
+      width: auto;
+    }
+  }
+
+  .textCont {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+      text-align: center;
+      flex: 1;
+      margin-bottom: 30px;
+    }
+
+    p {
+      flex: 2;
+      font-size: calc(12px + (16 - 12) * ((100vw - 300px) / (1600 - 300)));
+    }
+
+    input {
+      padding-left: 15px;
+      height: 45px;
+      font-family: "Lato", sans-serif;
+      border: none;
+      border-bottom: 2px solid rgba(130, 0, 0, 1);
+      font-size: 1.1rem;
+      width: 80%;
+      margin: auto;
+      margin-bottom: 10px;
+    }
+
+    div {
+      flex: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      button {
+        cursor: pointer;
+        font-family: "lato", sans-serif;
+        justify-self: center;
+        width: 180px;
+        height: 45px;
+        font-size: 1.3rem;
+        border: none;
+        color: white;
+        background-color: rgba(130, 0, 0, 1);
+        border-radius: 8px;
+        box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.1);
+        transition: 0.2s ease-in-out;
+
+        @media only screen and (max-width: 900px) {
+          margin-top: 20px;
+          height: 40px;
+          width: 160px;
+          font-size: 1rem;
+        }
+      }
+
+      button:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+}

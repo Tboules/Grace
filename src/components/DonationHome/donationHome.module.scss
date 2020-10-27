@@ -1,0 +1,57 @@
+.cont {
+  width: 80%;
+  margin: auto;
+  margin-bottom: 140px;
+  height: 430px;
+  background-size: 1400px;
+  background-repeat: no-repeat;
+  background-position: 0 -240px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.textCont {
+  position: relative;
+  width: 390px;
+  margin-right: auto;
+  background-color: rgba(176, 26, 26, 0.6);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px;
+  border-radius: 8px;
+
+  overflow-x: hidden;
+
+  h3 {
+    width: 250px;
+    text-align: center;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: white;
+    line-height: 25px;
+  }
+
+  button {
+    margin-top: 60px;
+    border: 2px solid white;
+    border-radius: 4px;
+    background-color: transparent;
+    color: white;
+    height: 60px;
+    width: 240px;
+    font-size: 22px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .textCont {
+    width: 300px !important;
+
+    h3 {
+      font-size: 18px !important;
+    }
+  }
+}

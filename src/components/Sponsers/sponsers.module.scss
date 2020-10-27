@@ -1,0 +1,39 @@
+.cont {
+  background-color: rgba(245, 192, 22, 0.17);
+  height: 380px;
+  box-sizing: border-box;
+  box-shadow: inset 0px 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 150px;
+
+  h1 {
+    font-family: "philosopher", sans-serif;
+    color: rgba(130, 0, 0, 1);
+    font-style: italic;
+    text-decoration: underline;
+    font-size: 1.9rem;
+    margin-left: 150px;
+    padding-top: 30px;
+    width: 190px;
+
+    @media only screen and (max-width: 600px) {
+      margin-left: 70px;
+    }
+  }
+}
+
+.imgDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img {
+  margin-top: 50px;
+  height: 150px;
+}
+
+@media only screen and (max-width: 500px) {
+  .img {
+    height: 100px;
+  }
+}

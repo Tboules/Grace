@@ -1,0 +1,155 @@
+.container {
+  display: flex;
+  width: 100%;
+  margin: auto;
+  height: 132px;
+  align-items: center;
+  font-family: "Philosopher", sans-serif;
+
+  img {
+    height: 62px;
+    margin-right: 40px;
+    transition: 0.2s ease-in-out;
+    padding-left: 14%;
+  }
+  img:hover {
+    transform: scale(1.05);
+  }
+
+  .butt {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    button {
+      cursor: pointer;
+      font-family: "Philosopher", sans-serif;
+      justify-self: center;
+      width: 203px;
+      height: 52px;
+      font-size: 36px;
+      border: none;
+      color: white;
+      background-color: rgba(130, 0, 0, 1);
+      border-radius: 8px;
+      box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.1);
+      transition: 0.2s ease-in-out;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+    }
+  }
+}
+
+.nav {
+  flex-grow: 4;
+  ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    position: relative;
+
+    li {
+      height: 132px;
+      width: 20%;
+      position: relative;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      @media only screen and (max-width: 1200px) {
+        width: 100%;
+        height: auto;
+      }
+    }
+    a {
+      height: 132px;
+      width: 100%;
+      cursor: pointer;
+      font-size: 18px;
+      color: rgba(130, 0, 0, 1);
+      text-decoration: none;
+      text-align: center;
+      line-height: 132px;
+
+      &:hover {
+        background-color: whitesmoke;
+      }
+
+      @media only screen and (max-width: 1200px) {
+        height: 50px;
+        line-height: 50px;
+      }
+    }
+  }
+}
+
+.burger {
+  cursor: pointer;
+  display: none;
+  div {
+    background-color: rgba(130, 0, 0, 1);
+    width: 30px;
+    height: 4px;
+    margin: 5px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    .logoHam {
+      width: 80%;
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      .burger {
+        margin-left: auto;
+      }
+    }
+
+    img {
+      padding-left: 0;
+    }
+  }
+
+  .burger {
+    display: block;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .nav {
+    ul {
+      margin: 0;
+      flex-direction: column;
+      padding-left: 0;
+      align-items: center;
+      padding-bottom: 40px;
+    }
+    li {
+      position: relative;
+      padding: 10px;
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .container {
+    img {
+      height: 40px;
+    }
+
+    .butt {
+      button {
+        width: 160px;
+        font-size: 28px;
+      }
+    }
+  }
+}

@@ -1,0 +1,96 @@
+.majorCont {
+  background-color: rgba(130, 0, 0, 1);
+  display: flex;
+  justify-content: space-between;
+  padding-top: 50px;
+  padding-left: 10%;
+  padding-right: 10%;
+  height: 312px;
+  box-sizing: border-box;
+
+  h2 {
+    font-family: "Philosopher", sans-serif;
+    color: white;
+    font-size: 24px;
+  }
+
+  p {
+    font-family: "Lato", sans-serif;
+    color: white;
+    line-height: 1.4rem;
+    font-size: 18px;
+  }
+}
+
+.graceLogo {
+  display: flex;
+  img {
+    image-rendering: auto;
+    margin: auto;
+    margin-top: 40px;
+  }
+}
+
+.about {
+  width: 280px;
+
+  h2,
+  p {
+    text-align: center;
+  }
+}
+
+.contact {
+  text-align: center;
+  img {
+    height: 44px;
+    margin-right: 5px;
+    margin-left: 5px;
+    width: 44px;
+  }
+}
+
+.sub {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  input {
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+    height: 48px;
+    width: 317px;
+    padding-left: 12px;
+    margin-top: 10px;
+    border-radius: 2px;
+    border: none;
+    box-sizing: border-box;
+  }
+
+  .email {
+    background-image: url("../../images/mail-logo.png");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-origin: content-box;
+    background-size: 2.3rem 2.3rem;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .majorCont {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    align-items: center;
+
+    .graceLogo {
+      margin-bottom: 40px;
+    }
+    .about,
+    .contact,
+    .sub {
+      margin-bottom: 20px;
+    }
+  }
+}
