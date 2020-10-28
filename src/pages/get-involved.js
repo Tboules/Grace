@@ -105,7 +105,7 @@ const GetInvolved = () => {
         />
         <BoxFifty id="intern" info={data.intern} button={true} order={1} />
       </GetInvolvedLayout>
-      <Email />
+      <Email title="Interested in Getting Involved?" />
     </Layout>
   )
 }
