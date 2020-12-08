@@ -10,9 +10,11 @@ const DonationServices = ({ id, info }) => {
       className={DS.cont}
     >
       <h1>{info.title}</h1>
-      <div className={DS.textCont}>
-        {documentToReactComponents(info.sectionDescriptionOne.json)}
-      </div>
+      <a href="/donation">
+        <div className={DS.textCont}>
+          {documentToReactComponents(info.sectionDescriptionOne.json)}
+        </div>
+      </a>
     </div>
   )
 }

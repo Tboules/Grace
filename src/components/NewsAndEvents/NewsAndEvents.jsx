@@ -34,6 +34,14 @@ const NewsAndEvents = ({ newsAndEventsQ }) => {
   }
 
   const imageIndex = wrap(0, images.length, page)
+  React.useEffect(() => {
+    const interval = setInterval(() => {
+      paginate(1)
+    }, 6000)
+    return () => clearInterval(interval)
+  }, [page])
+
+  console.log(page)
 
   return (
     <div className={single.cont}>
@@ -67,7 +75,9 @@ const NewsAndEvents = ({ newsAndEventsQ }) => {
       </AnimatePresence>
       <div className={single.textCont}>
         <h3>{newsAndEventsQ.NAEText}</h3>
-        <button>Find Out How</button>
+        <a href="/get-involved">
+          <button>Find Out How</button>
+        </a>
       </div>
     </div>
   )

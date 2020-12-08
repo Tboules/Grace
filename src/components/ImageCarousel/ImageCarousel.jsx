@@ -32,6 +32,13 @@ const ImageCarousel = ({ images }) => {
     setPage([page + newDirection, newDirection])
   }
 
+  React.useEffect(() => {
+    const interval = setInterval(() => {
+      paginate(1)
+    }, 6000)
+    return () => clearInterval(interval)
+  }, [page])
+
   const imageIndex = wrap(0, images.length, page)
 
   return (

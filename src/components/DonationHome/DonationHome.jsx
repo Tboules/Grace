@@ -8,7 +8,9 @@ const DonationHome = ({ donationInfo }) => (
   >
     <div className={DH.textCont}>
       <h3>{donationInfo.text}</h3>
-      <button>Donate</button>
+      <a href="/donation">
+        <button>Donate</button>
+      </a>
     </div>
   </div>
 )

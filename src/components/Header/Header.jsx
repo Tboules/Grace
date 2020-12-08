@@ -66,6 +66,9 @@ const Header = () => {
               </Collapse>
             </li>
             <li>
+              <Link to="/education">Education</Link>
+            </li>
+            <li>
               <Link to="/get-involved">Get Involved</Link>
             </li>
             <li>

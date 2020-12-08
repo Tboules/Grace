@@ -24,8 +24,12 @@ const BoxFifty = ({ info, id, button, input, order }) => {
           />
         )}
         <div>
-          {butt && (
-            <button>{info.callToAction ? info.callToAction : "Join!"}</button>
+          {butt && info.callToAction ? (
+            <a href="#interested">
+              <button>{info.callToAction}</button>
+            </a>
+          ) : (
+            <button>Join!</button>
           )}
         </div>
       </div>

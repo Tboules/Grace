@@ -1,4 +1,9 @@
 .frame {
   width: 99.5%;
-  height: 86vh;
+  height: 800px;
+
+  @media only screen and (max-width: 850px) {
+    height: 850px;
+    width: 98%;
+  }
 }

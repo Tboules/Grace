@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import EM from "./email.module.scss"
 
-const Email = ({ title }) => {
+const Email = ({ title, id }) => {
   const [from, setFrom] = useState(null)
   const [subject, setSubject] = useState(null)
   const [body, setBody] = useState(null)
@@ -16,7 +16,7 @@ const Email = ({ title }) => {
       body,
     }
 
-    fetch("http://localhost:9000/sendEmail", {
+    fetch("/.netlify/functions/email", {
       method: "POST",
       body: JSON.stringify(data),
     })
@@ -32,7 +32,7 @@ const Email = ({ title }) => {
   }
 
   return (
-    <div className={EM.cont}>
+    <div id={id} className={EM.cont}>
       <h1>{title}</h1>
       <h2>Shoot us an email</h2>
       <form onSubmit={sendEmail} action="" className={EM.form}>
