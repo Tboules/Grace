@@ -7,7 +7,7 @@ import { useMediaQuery } from "react-responsive"
 import PageNav from "../PageNav/PageNav"
 
 const Header = () => {
-  const [show, setShow] = useState(true)
+  const [show, setShow] = useState(false)
   const handleToggle = () => setShow(!show)
   const [about, setAbout] = useState(false)
   const [services, setServices] = useState(false)
@@ -22,7 +22,7 @@ const Header = () => {
   ]
   const aboutIds = ["mission", "about-us", "vision", "why-we-do-it", "history"]
 
-  const isLargeScreen = useMediaQuery({ query: "(min-width: 1200px)" })
+  const isLargeScreen = useMediaQuery({ query: "(min-width: 1400px)" })
 
   useEffect(() => {
     if (!isLargeScreen) {
@@ -69,7 +69,7 @@ const Header = () => {
               <Link to="/get-involved">Get Involved</Link>
             </li>
             <li>
-              <Link to="/news">News</Link>
+              <Link to="/the-latest">The Latest</Link>
             </li>
             <li>
               <Link to="/contact">Contact</Link>

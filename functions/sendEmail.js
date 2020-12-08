@@ -1,33 +1,28 @@
-const nodemailer = require("nodemailer")
+const mailgun = require("mailgun-js")
+require("dotenv").config()
 
-exports.handler = function (event, context) {
-  let transporter = nodemailer.createTransport({
-    host: "smtp.gmail.com",
-    host: 587,
-    secure: false,
-    auth: {
-      user: process.env.EMAIL,
-      pass: process.env.EMAIL_PASS,
-    },
+exports.handler = function (event, context, callback) {
+  theBody = JSON.parse(event.body)
+
+  const DOMAIN = process.env.MAILGUN_DOMAIN
+  const mg = mailgun({
+    apiKey: process.env.MAILGUN_API,
+    domain: DOMAIN,
   })
-  console.log(event.body)
-
-  transporter.sendMail(
-    {
-      from: "tboules@gmail.com",
-      to: process.env.EMAIL,
-      subject: "hello",
-      text: "test",
-    },
-    function (error, info) {
-      if (error) {
-        callback(error)
-      } else {
-        callback(null, {
-          statusCode: 200,
-          body: "working",
-        })
-      }
+  const data = {
+    from: theBody.from,
+    to: "tboules@gmail.com",
+    subject: `You are recieving this email from ${theBody.from} about: 
+    ${theBody.subject}`,
+    text: theBody.body,
+  }
+  mg.messages().send(data, (error, body) => {
+    if (error) {
+      return console.log(error)
     }
-  )
+    callback(null, {
+      statusCode: 200,
+      body: "Mail sent",
+    })
+  })
 }

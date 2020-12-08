@@ -5,13 +5,10 @@ import Layout from "../components/Layout/Layout"
 import Sandwich from "../components/Sandwich/Sandwich"
 import TitleCardInfo from "../components/TitleCardInfo/TitleCardInfo"
 import TextImageRight from "../components/TextImageRight/TextImageRight"
-import PageNav from "../components/PageNav/PageNav"
 
 //vectors
 import blue from "../vectors/blue.svg"
 import yellow from "../vectors/Yellow.svg"
-
-const aboutIds = ["mission", "about-us", "vision", "why-we-do-it", "history"]
 
 const AboutUs = () => {
   const aboutUs = useStaticQuery(graphql`

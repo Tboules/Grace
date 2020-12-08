@@ -10,7 +10,6 @@ import TextSandwich from "../components/TextSandwich/TextSandwich"
 import TextSingleImgRight from "../components/TextSingleImgRight/TextSingleImgRight"
 import BigCards from "../components/BigCards/BigCards"
 import DonationServices from "../components/DonationServices/DonationServices"
-import PageNav from "../components/PageNav/PageNav"
 
 const Services = () => {
   const servicesInfo = useStaticQuery(graphql`

@@ -6,6 +6,8 @@ const Email = ({ title }) => {
   const [subject, setSubject] = useState(null)
   const [body, setBody] = useState(null)
 
+  // const form = useRef(null)
+
   const sendEmail = e => {
     e.preventDefault()
     const data = {
@@ -14,22 +16,17 @@ const Email = ({ title }) => {
       body,
     }
 
-    // fetch("/.netlify/functions/sendEmail", {
-    //   method: "POST",
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //   },
-    //   body: data,
-    // })
-    //   .then(res => res.json())
-    //   .then(data => {
-    //     console.log("success", data)
-    //   })
-    //   .catch(error => {
-    //     console.error("error", error)
-    //   })
-
-    console.log(`sending mail from ${data.from}`)
+    fetch("http://localhost:9000/sendEmail", {
+      method: "POST",
+      body: JSON.stringify(data),
+    })
+      .then(res => res.json())
+      .then(data => {
+        console.log("success", data)
+      })
+      .catch(error => {
+        console.error("error", error)
+      })
 
     e.target.reset()
   }
@@ -42,6 +39,7 @@ const Email = ({ title }) => {
         <div className={EM.inputCont}>
           <label htmlFor="from">From:</label>
           <input
+            name="from"
             onChange={e => setFrom(e.target.value)}
             id="from"
             type="text"
@@ -49,6 +47,7 @@ const Email = ({ title }) => {
           />
           <label htmlFor="subject">Subject:</label>
           <input
+            name="subject"
             onChange={e => setSubject(e.target.value)}
             id="subject"
             type="text"
@@ -56,6 +55,7 @@ const Email = ({ title }) => {
           />
           <label htmlFor="body">Body:</label>
           <textarea
+            name="body"
             className={EM.body}
             id="body"
             type="text"

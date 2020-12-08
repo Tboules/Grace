@@ -5,7 +5,7 @@ const BoxFifty = ({ info, id, button, input, order }) => {
   const [emailInput, SetEmailInput] = useState(input)
   const [butt, setButt] = useState(button)
   const [email, setEmail] = useState(null)
-  console.log(email)
+
   return (
     <div id={id} className={BF.cont}>
       <img

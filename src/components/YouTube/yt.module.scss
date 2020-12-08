@@ -1,0 +1,23 @@
+.cont {
+  padding: 55px;
+  background-color: whitesmoke;
+  border-bottom: 3px solid rgba(130, 0, 0, 0.796);
+  border-top: 3px solid rgba(130, 0, 0, 0.796);
+
+  h2 {
+    text-align: center;
+    padding-bottom: 20px;
+  }
+}
+
+.vidCont {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.vid {
+  width: 420px;
+  height: 315px;
+  margin-top: 20px;
+}
