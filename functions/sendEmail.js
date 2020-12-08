@@ -11,7 +11,7 @@ exports.handler = function (event, context, callback) {
   })
   const data = {
     from: theBody.from,
-    to: "tboules@gmail.com",
+    to: process.env.EMAIL,
     subject: `You are recieving this email from ${theBody.from} about: 
     ${theBody.subject}`,
     text: theBody.body,
