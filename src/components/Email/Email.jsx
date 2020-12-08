@@ -16,7 +16,7 @@ const Email = ({ title, id }) => {
       body,
     }
 
-    fetch("/.netlify/functions/email", {
+    fetch("/.netlify/functions/sendEmail", {
       method: "POST",
       body: JSON.stringify(data),
     })
