@@ -41,8 +41,6 @@ const NewsAndEvents = ({ newsAndEventsQ }) => {
     return () => clearInterval(interval)
   }, [page])
 
-  console.log(page)
-
   return (
     <div className={single.cont}>
       <AnimatePresence initial={false} custom={direction}>

@@ -22,7 +22,6 @@ export const query = graphql`
 `
 
 const TheLatest = props => {
-  console.log(props.data.contentfulTheLatestPost)
   const data = props.data.contentfulTheLatestPost
   return (
     <Layout>

@@ -9,7 +9,6 @@ const YouTube = ({ info }) => {
     info.link3.replace(regex, ""),
   ]
 
-  console.log(linkArr)
   return (
     <div className={YT.cont}>
       <h2>{info.title}</h2>

@@ -39,8 +39,6 @@ const Education = () => {
 
   const data = edQuery.allContentfulEducationPage.edges[0].node
 
-  console.log(data)
-
   return (
     <Layout>
       <Banner id="education" info={data.educationBanner} vec={yellow} />

@@ -78,7 +78,6 @@ const GetInvolved = () => {
     }
   `)
   const data = GIInfo.allContentfulGetInvolvedPage.edges[0].node
-  console.log(data)
 
   return (
     <Layout>
