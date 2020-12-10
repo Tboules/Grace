@@ -1,10 +1,16 @@
 import React, { useState } from "react"
 import BF from "./boxFifty.module.scss"
+import { mailChimp } from "../../utils"
 
 const BoxFifty = ({ info, id, button, input, order }) => {
   const [emailInput, SetEmailInput] = useState(input)
   const [butt, setButt] = useState(button)
-  const [email, setEmail] = useState(null)
+  const [email, setEmail] = useState("")
+
+  const handleJoin = () => {
+    mailChimp(email)
+    setEmail("")
+  }
 
   return (
     <div id={id} className={BF.cont}>
@@ -21,6 +27,7 @@ const BoxFifty = ({ info, id, button, input, order }) => {
             onChange={e => setEmail(e.target.value)}
             type="text"
             placeholder="email"
+            value={email}
           />
         )}
         <div>
@@ -29,7 +36,7 @@ const BoxFifty = ({ info, id, button, input, order }) => {
               <button>{info.callToAction}</button>
             </a>
           ) : (
-            <button>Join!</button>
+            <button onClick={handleJoin}>Join!</button>
           )}
         </div>
       </div>

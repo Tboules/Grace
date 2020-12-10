@@ -3,8 +3,14 @@ import whiteLogo from "../../images/White Logo.png"
 import instaLogo from "../../images/Instagram_AppIcon_Aug2017.png"
 import fbLogo from "../../images/f_logo_RGB-Blue_58.png"
 import F from "./footer.module.scss"
+import { mailChimp } from "../../utils"
 
 const Footer = () => {
+  const handleSubmit = e => {
+    e.preventDefault()
+    mailChimp(e.target.email.value)
+    e.target.reset()
+  }
   return (
     <div className={F.majorCont}>
       <div className={F.graceLogo}>
@@ -28,10 +34,15 @@ const Footer = () => {
         <img src={instaLogo} alt="Instagram Logo" />
         <img src={fbLogo} alt="FaceBook Logo" />
       </div>
-      <form className={F.sub}>
+      <form onSubmit={handleSubmit} className={F.sub}>
         <h2>Subscribe</h2>
-        <input type="text" placeholder="Full Name" />
-        <input className={F.email} type="text" placeholder="Email" />
+        <input
+          className={F.email}
+          name="email"
+          type="submit/text"
+          placeholder="Email"
+        />
+        <input type="submit" placeholder="Full Name" />
       </form>
     </div>
   )

@@ -10,6 +10,13 @@ module.exports = {
     `gatsby-plugin-smoothscroll`,
     `gatsby-plugin-sass`,
     {
+      resolve: "gatsby-plugin-mailchimp",
+      options: {
+        endpoint: process.env.MAIL_CHIMP,
+        timeout: 3500,
+      },
+    },
+    {
       resolve: "gatsby-source-contentful",
       options: {
         spaceId: process.env.CONTENTFUL_SPACE_ID,

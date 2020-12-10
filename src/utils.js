@@ -1,3 +1,5 @@
+import addToMailchimp from "gatsby-plugin-mailchimp"
+
 export const toTitleCase = word => {
   return word
     .split("-")
@@ -8,4 +10,9 @@ export const toTitleCase = word => {
         .concat(word.split("").slice(1).join(""))
     })
     .join(" ")
+}
+
+export const mailChimp = async email => {
+  const results = await addToMailchimp(email)
+  alert(results.msg)
 }
