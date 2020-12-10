@@ -2,7 +2,7 @@ const mailgun = require("mailgun-js")
 require("dotenv").config()
 
 exports.handler = function (event, context, callback) {
-  theBody = JSON.parse(event.body)
+  const theBody = JSON.parse(event.body)
 
   const DOMAIN = process.env.MAILGUN_DOMAIN
   const mg = mailgun({
@@ -22,6 +22,9 @@ exports.handler = function (event, context, callback) {
     }
     callback(null, {
       statusCode: 200,
+      headers: {
+        "Content-Type": "application/json",
+      },
       body: "Mail sent",
     })
   })

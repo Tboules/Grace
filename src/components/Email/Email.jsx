@@ -15,9 +15,13 @@ const Email = ({ title, id }) => {
       subject,
       body,
     }
+    // fetch("http://localhost:9000/sendEmail", {
 
     fetch("/.netlify/functions/sendEmail", {
       method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
       body: JSON.stringify(data),
     })
       .then(res => res.json())
