@@ -31,8 +31,12 @@ const Footer = () => {
           <br /> Fountain Valley, CA, 92708
           <br /> (714)983-4370
         </p>
-        <img src={instaLogo} alt="Instagram Logo" />
-        <img src={fbLogo} alt="FaceBook Logo" />
+        <a href="">
+          <img src={instaLogo} alt="Instagram Logo" />
+        </a>
+        <a href="https://www.facebook.com/Elevatedbygrace">
+          <img src={fbLogo} alt="FaceBook Logo" />
+        </a>
       </div>
       <form onSubmit={handleSubmit} className={F.sub}>
         <h2>Subscribe</h2>

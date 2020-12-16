@@ -3,7 +3,7 @@ import IF from "./iframe.module.scss"
 
 const IFrame = ({ url }) => {
   return (
-    <div>
+    <div className={IF.cont}>
       <iframe src={url} className={IF.frame} />
     </div>
   )
