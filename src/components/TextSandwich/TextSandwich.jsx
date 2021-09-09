@@ -13,7 +13,11 @@ const TextSandwich = ({ id, info }) => {
         <div className={TextS.imgCont}>
           <img
             className={TextS.img}
-            src={info?.sectionImages[0]?.file.url}
+            src={
+              info?.sectionImages[0]?.file.url
+                ? info?.sectionImages[0]?.file.url
+                : ""
+            }
             alt=""
           />
         </div>
