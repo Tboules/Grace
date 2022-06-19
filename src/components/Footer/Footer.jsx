@@ -27,10 +27,14 @@ const Footer = () => {
       <div className={F.contact}>
         <h2>Contact</h2>
         <p>
-          18326 Ward Street
+          OC: 18326 Ward Street
           <br /> Fountain Valley, CA, 92708
-          <br /> (714)983-4370
         </p>
+        <p>
+          LA: 3024 Stoner Ave
+          <br /> W. Los Angeles, CA, 90066
+        </p>
+        <p>(714)983-4370</p>
         <a href="">
           <img src={instaLogo} alt="Instagram Logo" />
         </a>
